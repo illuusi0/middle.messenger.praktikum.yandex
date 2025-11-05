@@ -1,24 +1,47 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+import './style.css';
+import { Button } from './components/button/button.js';
+import { Chats } from './modules/chats/chats.js';
+import { Message } from './modules/chats/components/message/message.js';
+
+const buttonHtml = Button({
+  className: 'button-primary',
+  type: 'submit',
+  text: 'Click me',
+});
+
+console.log('Button HTML:', buttonHtml);
+
+const chatsHtml = Chats({
+  wrapperClassName: 'chats-wrapper',
+  buttonText: 'New Chat',
+  chatListClassName: 'chat-list',
+  chatListItems: ['Chat 1', 'Chat 2', 'Chat 3'],
+});
+
+console.log('Chats HTML:', chatsHtml);
+
+const messageHtml = Message({
+  text: 'Hello, world!',
+  time: '12:34',
+  isOwn: true,
+});
+
+console.log('Message HTML:', messageHtml);
 
 document.querySelector('#app').innerHTML = `
   <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
+    <h1>Примеры использования шаблонизатора</h1>
+    <div class="example">
+      <h2>Кнопка:</h2>
+      ${buttonHtml}
     </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
+    <div class="example">
+      <h2>Список чатов:</h2>
+      ${chatsHtml}
+    </div>
+    <div class="example">
+      <h2>Сообщение:</h2>
+      ${messageHtml}
+    </div>
   </div>
-`
-
-setupCounter(document.querySelector('#counter'))
+`;
