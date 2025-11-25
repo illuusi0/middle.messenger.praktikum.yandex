@@ -4,7 +4,7 @@
 
 ## Демо
 
-Netlify: [ссылка будет добавлена после деплоя]
+Netlify: https://69261bae138d2e0008f747ef--profound-mochi-9badca.netlify.app/
 
 ## Дизайн
 
@@ -39,15 +39,15 @@ npm install
 
 ## Страницы
 
-- [Главная (навигация)](/)
-- [Авторизация](/pages/login/)
-- [Регистрация](/pages/register/)
-- [Чаты](/pages/chats/)
-- [Настройки профиля](/pages/settings/)
-- [Редактирование профиля](/pages/settings-edit/)
-- [Изменение пароля](/pages/settings-password/)
-- [404](/pages/404/)
-- [500](/pages/500/)
+- [Главная (навигация)](https://69261bae138d2e0008f747ef--profound-mochi-9badca.netlify.app/)
+- [Авторизация](https://69261bae138d2e0008f747ef--profound-mochi-9badca.netlify.app/pages/login/)
+- [Регистрация](https://69261bae138d2e0008f747ef--profound-mochi-9badca.netlify.app/pages/register/)
+- [Чаты](https://69261bae138d2e0008f747ef--profound-mochi-9badca.netlify.app/pages/chats/)
+- [Настройки профиля](https://69261bae138d2e0008f747ef--profound-mochi-9badca.netlify.app/pages/settings/)
+- [Редактирование профиля](https://69261bae138d2e0008f747ef--profound-mochi-9badca.netlify.app/pages/settings-edit/)
+- [Изменение пароля](https://69261bae138d2e0008f747ef--profound-mochi-9badca.netlify.app/pages/settings-password/)
+- [404](https://69261bae138d2e0008f747ef--profound-mochi-9badca.netlify.app/pages/404/)
+- [500](https://69261bae138d2e0008f747ef--profound-mochi-9badca.netlify.app/pages/500/)
 
 ## Структура проекта
 
@@ -56,6 +56,7 @@ src/
 ├── components/       # Переиспользуемые компоненты
 │   ├── avatar/
 │   ├── button/
+│   ├── icons/
 │   ├── input/
 │   └── link/
 ├── pages/           # Страницы приложения
@@ -74,6 +75,8 @@ src/
 │   ├── main.css
 │   └── variables.css
 └── utils/           # Утилиты
+    ├── get.js
+    ├── http.js
     └── templator.js
 ```
 
